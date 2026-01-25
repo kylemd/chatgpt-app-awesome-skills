@@ -33,9 +33,9 @@ This repository provides essential skills to transform your AI assistant into a 
 - [🛠️ Installation](#installation)
 - [🤝 How to Contribute](#how-to-contribute)
 - [👥 Contributors & Credits](#credits--sources)
+- [⚖️ License](#license)
 - [👥 Repo Contributors](#repo-contributors)
 - [🌟 Star History](#star-history)
-- [⚖️ License](#license)
 
 ---
 
