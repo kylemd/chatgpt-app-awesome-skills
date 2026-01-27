@@ -5,6 +5,7 @@ on:
     branches: ["main", "feat/*"]
   pull_request:
     branches: ["main"]
+  workflow_dispatch:
 
 jobs:
   validate-and-build:
@@ -35,4 +36,15 @@ jobs:
 
       - name: 🚨 Check for Uncommitted Drift
         run: |
-          git diff --exit-code || (echo "❌ Detected uncommitted changes in README.md or skills_index.json. Please run scripts locally and commit." && exit 1)
+          if ! git diff --quiet; then
+            echo "❌ Detected uncommitted changes produced by registry/readme scripts."
+            echo
+            echo "To fix locally, run the FULL Validation Chain, then commit and push:"
+            echo "  python3 scripts/validate_skills.py"
+            echo "  python3 scripts/generate_index.py"
+            echo "  python3 scripts/update_readme.py"
+            echo "  git add README.md skills_index.json"
+            echo "  git commit -m \"chore: sync generated registry files\""
+            echo "  git push"
+            exit 1
+          fi
