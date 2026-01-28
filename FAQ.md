@@ -102,7 +102,7 @@ git pull origin main
 
 Use the `@` symbol followed by the skill name:
 
-```
+```bash
 @brainstorming help me design a todo app
 ```
 
@@ -110,15 +110,15 @@ Use the `@` symbol followed by the skill name:
 
 **Yes!** You can invoke multiple skills:
 
-```
+```bash
 @brainstorming help me design this, then use @writing-plans to create a task list.
 ```
 
 ### How do I know which skill to use?
 
-1.  **Browse the README**: Check the [Full Skill Registry](README.md#full-skill-registry-256256).
-2.  **Search**: `ls skills/ | grep "keyword"`
-3.  **Ask your AI**: "What skills do you have for testing?"
+1. **Browse the README**: Check the [Full Skill Registry](README.md#full-skill-registry-256256).
+2. **Search**: `ls skills/ | grep "keyword"`
+3. **Ask your AI**: "What skills do you have for testing?"
 
 ---
 
@@ -128,9 +128,9 @@ Use the `@` symbol followed by the skill name:
 
 **Possible causes:**
 
-1.  **Wrong installation path**: Check your tool's docs. Try `.agent/skills/`.
-2.  **Restart Needed**: Restart your AI/IDE after installing.
-3.  **Typos**: Did you type `@brain-storming` instead of `@brainstorming`?
+1. **Wrong installation path**: Check your tool's docs. Try `.agent/skills/`.
+2. **Restart Needed**: Restart your AI/IDE after installing.
+3. **Typos**: Did you type `@brain-storming` instead of `@brainstorming`?
 
 ### A skill gives incorrect or outdated advice
 
@@ -158,9 +158,9 @@ Include:
 
 V3 introduces automated quality control. Your skill might be missing:
 
-1.  A valid `description`.
-2.  Usage examples.
-    Run `python3 scripts/validate_skills.py` locally to check before you push.
+1. A valid `description`.
+2. Usage examples.
+   Run `python3 scripts/validate_skills.py` locally to check before you push.
 
 ### Can I update an "Official" skill?
 
